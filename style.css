@@ -1,0 +1,34 @@
+.container-full {
+    background-image: url("images/wine1.jpg");
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    height: 900px;
+}
+
+.navbar-nav {
+    font-size: 1.5rem;
+}
+
+p {
+    width: 50%;
+}
+
+h2 {
+    padding: 4%;
+}
+
+.blois, .chen {
+    padding: 5%;
+}
+
+footer {
+    background-color: black;
+    height: 100px;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: black;
+}
