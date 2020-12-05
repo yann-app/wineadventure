@@ -47,8 +47,10 @@
                     <div class="col-6 mx-auto">
                         <div class="jumbotron bg-transparent">
                             <h1 class="display-4 text-white">Decouvrez les vins de France</h1>
-                            <p class="lead text-cente">
-                                <a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a>
+                            <p class="lead text-center">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Bordeaux</a>
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Cotes du rhone</a>
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
                             </p>
                         </div>
                     </div>
@@ -75,30 +77,50 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
-        <div class="col-md-4">
-            <img class="blois" src="images/blois_1.jpg">
-        </div>
-            <div class="col-md-4">
-                <img class="chen" src="images/chenonceaux_1.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="jumbotron-blois h-100 text-center">
+                    <div class="button">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-4">
-                <img class="blois" src="images/blois_1.jpg">
-            </div>
-            <div class="col-md-4">
-                <img class="chen" src="images/chenonceaux_1.jpg">
+            <div class="col-md-6">
+                <div class="jumbotron-chen h-100 text-center">
+                    <div class="button">
+                    <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="jumbotron-blois h-100 text-center">
+                            <div class="button">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="jumbotron-chen h-100 text-center">
+                            <div class="button">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
     <div class="container-fluid">
+        <div class="row-footer w-100">
         <footer>
 
         </footer>
+        </div>
     </div>
-
 
 <!-- Optional JavaScript; choose one of the two! -->
 

@@ -17,13 +17,27 @@ h2 {
     padding: 4%;
 }
 
-.blois, .chen {
-    padding: 5%;
+.jumbotron-blois {
+    background-image: url("images/blois.jpg");
+    background-size: cover;
+    min-height: 300px;
 }
 
-footer {
+.jumbotron-chen {
+    background-image: url("images/chen.jpg");
+    background-size: cover;
+    min-height: 300px;
+}
+
+.button {
+    padding-top: 40%;
+}
+
+.row-footer {
     background-color: black;
-    height: 100px;
+    height: 8em;
 }
 
-
+.container {
+    margin-bottom: 2%;
+}
