@@ -42,10 +42,16 @@
                 </ul>
             </div>
         </nav>
-            <div class="container-full">
-                <div class="text">
-                    <h1>Voyages en France</h1>
-                        <button type="button" class="btn btn-secondary">Cliquez ici</button>
+            <div class="container-top d-flex h-100">
+                <div class="row align-self-center w-100">
+                    <div class="col-6 mx-auto">
+                        <div class="jumbotron bg-transparent">
+                            <h1 class="display-4 text-white">Decouvrez les vins de France</h1>
+                            <p class="lead text-cente">
+                                <a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
     <div class="container-fluid">
