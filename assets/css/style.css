@@ -2,10 +2,17 @@ body,html {
     height: 100%;
 }
 
-.container-top  {
-    background-image: url("images/wine1.jpg");
+.container-top {
+    background-image: url("../images/wine1.jpg");
     background-repeat: no-repeat;
 }
+
+.container-bor {
+    background-image: url("../images/bordeaux.jpg");
+    background-repeat: no-repeat;
+}
+
+
 
 .navbar-nav {
     font-size: 1.5rem;
@@ -18,13 +25,13 @@ h2 {
 }
 
 .jumbotron-blois {
-    background-image: url("images/blois.jpg");
+    background-image: url("../images/blois.jpg");
     background-size: cover;
     min-height: 300px;
 }
 
 .jumbotron-chen {
-    background-image: url("images/chen.jpg");
+    background-image: url("../images/chen.jpg");
     background-size: cover;
     min-height: 300px;
 }
