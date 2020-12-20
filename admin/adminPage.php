@@ -7,6 +7,7 @@ require_once (__DIR__ . '/../config/database.php');
 $id = isset($_POST["id"]) ? $_POST["id"] : "";
 $text = isset($_POST["text"]) ? $_POST["text"] : "";
 
+
 if (isset($_POST)){
     if ($id){
         $sql = "UPDATE articles SET text=:text WHERE id = " . $_POST['id'];
@@ -15,12 +16,15 @@ if (isset($_POST)){
             $stmt = $pdo->prepare($sql);
             $stmt->bindParam(':text', $text);
 
+            $text = $_POST['text'];
+
             $retour = $stmt->execute();
         }catch (Exception $e){
             echo "Erreur !" .$e->getMessage();
         }
     }
 }
+
 ?>
 
 <!doctype html>
@@ -58,6 +62,58 @@ if (isset($_POST)){
         </div>
         <button type="submit" class="btn btn-primary">Valider</button>
     </form>
+</div>
+
+    <div class="col-md-2 mx-auto mt-5">
+
+        <h2>Ajouter article blog</h2>
+        <form method="post" action="/blog/ajoutarticle.php">
+            <div class="form-group">
+
+                <textarea class="form-control" name="titre" rows="1">Titre</textarea>
+
+                <textarea class="form-control" name="texte" rows="5">Texte</textarea>
+
+                <input type="file" class="form-control" name="photo">
+            </div>
+            <button type="submit" class="btn btn-primary" value="blog">Valider</button>
+        </form>
+    </div>
+
+    <?php
+    try{
+    $sql = "SELECT * FROM blog";
+    $stmt = $pdo->query($sql);
+
+    if($stmt === false){
+        die("Erreur");
+    }
+
+}catch (PDOException $e){
+    echo $e->getMessage();
+}
+?>
+
+<div class="col-md-8 mx-auto pt-5 mt-5">
+<table class="table">
+    <thead>
+    <tr>
+        <th>Blog</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>
+        <tr>
+            <td><?php echo htmlspecialchars($row['idblog']); ?></td>
+            <td><?php echo htmlspecialchars($row['titre']); ?></td>
+            <td><?php echo htmlspecialchars($row['texte']); ?></td>
+            <td><?php echo '<img src ="/assets/images/'.$row['photo'].'" width = "200" height = "200"/>'; ?></td>
+            <td><a href="/blog/modifierArticle.php?idblog= <?php echo ($row['idblog']); ?>">Modifier</a> </td>
+            <td><a href="/blog/supprimerArticle.php?idblog= <?php echo ($row['idblog']); ?>">Supprimer</a> </td>
+        </tr>
+    <?php endwhile; ?>
+    </tbody>
+</table>
 </div>
 
 <?php } else {?>

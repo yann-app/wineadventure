@@ -8,7 +8,23 @@ body,html {
 }
 
 .container-bor {
-    background-image: url("../images/bordeaux.jpg");
+    background-image: url("../images/bordeaux_1.jpg");
+    background-repeat: no-repeat;
+}
+
+.container-cotes {
+    background-image: url("../images/cotesdurhone.jpg");
+    background-repeat: no-repeat;
+}
+
+
+.container-beauj {
+    background-image: url("../images/beaujolais.jpg");
+    background-repeat: no-repeat;
+}
+
+.container-alsa {
+    background-image: url("../images/alsace_1.jpg");
     background-repeat: no-repeat;
 }
 

@@ -13,7 +13,7 @@
                 <a class="nav-link text-uppercase px-2" href="../index.php">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-uppercase px-2" href="#">Presentation</a>
+                <a class="nav-link text-uppercase px-2" href="../blog/blog.php">Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-uppercase px-2" href="#">Services</a>

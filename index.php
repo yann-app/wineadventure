@@ -10,11 +10,12 @@ require_once (__DIR__ . '/includes/header.php');
                     <div class="col-6 mx-auto">
                         <div class="jumbotron bg-transparent">
                             <h1 class="display-4 text-white">Decouvrez les vins de France</h1>
-                            <p class="lead text-center">
-                                <a class="btn btn-primary btn-lg" href="winetours/bordeaux.php" role="button">Bordeaux</a>
-                                <a class="btn btn-primary btn-lg" href="#" role="button">Cotes du rhone</a>
-                                <a class="btn btn-primary btn-lg" href="#" role="button">Beaujolais</a>
-                            </p>
+
+                            <?php
+
+                            require_once (__DIR__ .'/includes/jumbotron.php');
+
+                            ?>
                         </div>
                     </div>
                 </div>

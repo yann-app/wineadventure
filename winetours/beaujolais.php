@@ -10,11 +10,11 @@ while ($donnees = $reponse->fetch())
 {
 ?>
 
-<div class="container-bor d-flex h-100">
+<div class="container-beauj d-flex h-100">
     <div class="row align-self-center w-100">
         <div class="col-6 mx-auto">
             <div class="jumbotron bg-transparent">
-                <h1 class="display-4 text-white text-center">Bordeaux</h1>
+                <h1 class="display-4 text-white text-center">Beaujolais</h1>
 
                 <?php
 
@@ -100,3 +100,4 @@ while ($donnees = $reponse->fetch())
 
 </body>
 </html>
+
