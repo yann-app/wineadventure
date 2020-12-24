@@ -46,10 +46,12 @@ if (isset($_POST)){
 <?php if (isset($_SESSION['user_id'])) { ?>
 <a href="logout.php" class="btn btn-primary">Deconnexion</a>
 
-<div class="col-md-2 mx-auto mt-5">
+<div class="row">
+<div class="col-md-4 ml-auto mt-5">
     <h2>Modifier texte</h2>
     <form method="post" action="">
         <div class="form-group">
+            <label for="numero">Numero</label>
             <select class="form-control " name="id">
                 <option>1</option>
                 <option>2</option>
@@ -64,21 +66,25 @@ if (isset($_POST)){
     </form>
 </div>
 
-    <div class="col-md-2 mx-auto mt-5">
+    <div class="col-md-4 mr-auto mt-5">
 
         <h2>Ajouter article blog</h2>
         <form method="post" action="/blog/ajoutarticle.php">
             <div class="form-group">
 
-                <textarea class="form-control" name="titre" rows="1">Titre</textarea>
+                <label for="titre">Titre</label>
+                <textarea class="form-control" name="titre" rows="1"></textarea>
 
-                <textarea class="form-control" name="texte" rows="5">Texte</textarea>
+                <label for="text">Texte</label>
+
+                <textarea class="form-control" name="texte" rows="5"></textarea>
 
                 <input type="file" class="form-control" name="photo">
             </div>
-            <button type="submit" class="btn btn-primary" value="blog">Valider</button>
+            <button type="submit" class="btn btn-primary">Valider</button>
         </form>
     </div>
+</div>
 
     <?php
     try{
@@ -108,7 +114,7 @@ if (isset($_POST)){
             <td><?php echo htmlspecialchars($row['titre']); ?></td>
             <td><?php echo htmlspecialchars($row['texte']); ?></td>
             <td><?php echo '<img src ="/assets/images/'.$row['photo'].'" width = "200" height = "200"/>'; ?></td>
-            <td><a href="/blog/modifierArticle.php?idblog= <?php echo ($row['idblog']); ?>">Modifier</a> </td>
+            <td><a href="/blog/modifier.php?idblog= <?php echo ($row['idblog']); ?>">Modifier</a> </td>
             <td><a href="/blog/supprimerArticle.php?idblog= <?php echo ($row['idblog']); ?>">Supprimer</a> </td>
         </tr>
     <?php endwhile; ?>

@@ -1,0 +1,37 @@
+The main idea is to have 2 blocks of code:
+
+if( isset($_POST['nameOfYourForm']) )
+
+Here you will update data
+
+And else
+
+Here you will select data from database and render you form with set data
+
+you have to have something that is pointing to the item you are editing  in URL address.. eg. id.
+let's say, you have a page with edit button:
+
+<a href="your_script_with_form_filled_with_data.php?id=<?php echo $hardcodedOrSelectedFromDatabaseId; ?>">Edit</a>
+
+going back to that "else" part that I mentioned before:
+
+else {
+
+    // here you have to get that id from url param. like this:
+    $id = $_GET['id'];
+
+    // then using this value, select appropriate item from db:
+    $record = mysqli_query($db, "SELECT * FROM your_table_name_with_items_you_want_to_edit WHERE id=$id");
+
+		if (count($record) == 1 ) {
+			$n = mysqli_fetch_array($record);
+			$field1 = $n['field1'];
+			$field2 = $n['field2'];
+		}
+
+}
+
+and then set these values as inputs' values
+
+<input type="text" name="field1" value="<?php echo $field1; ?>">
+<input type="text" name="field2" value="<?php echo $field2; ?>">
