@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"  href="/assets/css/style.css">
     <link rel="stylesheet"  href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
 
 
     <title>Wineadventure</title>

@@ -18,6 +18,11 @@ try{
 ?>
 
 <div class="col-md-8 mx-auto pt-5 mt-5">
+    <form method="get" action="/includes/search.php">
+
+        <input type="search" name="search" placeholder="Recherche...">
+        <input type="submit" value="Valider">
+    </form>
 <table class="table">
     <thead>
     <tr>

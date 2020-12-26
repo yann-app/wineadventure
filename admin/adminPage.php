@@ -37,6 +37,7 @@ if (isset($_POST)){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"  href="/assets/css/style.css">
     <link rel="stylesheet"  href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../fontawesome/css/all.min.css">
 
 
     <title>Wineadventure</title>
@@ -46,9 +47,9 @@ if (isset($_POST)){
 <?php if (isset($_SESSION['user_id'])) { ?>
 <a href="logout.php" class="btn btn-primary">Deconnexion</a>
 
-<div class="row">
+<div class="row bg-secondary">
 <div class="col-md-4 ml-auto mt-5">
-    <h2>Modifier texte</h2>
+    <h2 class="pl-1">Modifier texte</h2>
     <form method="post" action="">
         <div class="form-group">
             <label for="numero">Numero</label>
@@ -68,7 +69,7 @@ if (isset($_POST)){
 
     <div class="col-md-4 mr-auto mt-5">
 
-        <h2>Ajouter article blog</h2>
+        <h2 class="pl-1">Ajouter article blog</h2>
         <form method="post" action="/blog/ajoutarticle.php">
             <div class="form-group">
 
@@ -105,6 +106,7 @@ if (isset($_POST)){
     <thead>
     <tr>
         <th>Blog</th>
+
     </tr>
     </thead>
     <tbody>
